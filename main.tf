@@ -60,3 +60,9 @@ module "nic_nsg_assoc" {
   source      = "../../Child_Module/azurerm_nic_nsg_assoc" # ✅ FIXED name
   nic_nsg_ids = var.nic_nsg_ids
 }
+
+
+module "resource_group" {
+  source = "../../Child_Module/Resource_group"
+  rg     = var.rg1
+}
